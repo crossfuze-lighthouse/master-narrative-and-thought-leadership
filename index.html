@@ -192,6 +192,16 @@ button.cars-file:disabled{cursor:wait;opacity:.72}
 .resource-centre .live-kit-link-guide .live-kit-badge{color:#1a559b}
 .resource-centre .single-sales-resource{grid-template-columns:minmax(0,1fr);max-width:590px}
 @media(max-width:650px){.resource-centre .single-sales-resource{max-width:none}}
+
+/* Fast secure CARS playback and online PDF deck viewer */
+.cars-deck-viewer[hidden]{display:none}
+.cars-deck-viewer{margin-top:18px}
+.cars-deck-description,.cars-deck-disclaimer{font-size:12px;color:#cbd6ef;line-height:1.6;margin:5px 0 12px}
+.cars-deck-disclaimer{font-size:11px;margin:10px 0 0;color:#94add0}
+#cars-pdf-frame{width:100%;height:min(56vh,570px);min-height:280px;border:1px solid rgba(143,255,219,.36);border-radius:10px;background:#fff}
+.cars-view-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.cars-view-actions .cars-lock-download{margin:10px 0 0;display:inline-flex;align-items:center;justify-content:center}
+@media(max-width:680px){#cars-pdf-frame{height:58vh;min-height:350px}.cars-view-actions .cars-lock-download{flex:1 1 100%;padding:12px 7px}}
 </style>
 </head>
 <body>
@@ -247,15 +257,15 @@ button.cars-file:disabled{cursor:wait;opacity:.72}
 <div class="cars-files-head"><span>Launch enablement</span><span>🔒 Password protected</span></div>
 <button aria-haspopup="dialog" class="cars-file clickable cars-unlock-btn" data-cars-action="recording" type="button">
 <span aria-hidden="true" class="cars-file-symbol">▶</span>
-<span class="cars-file-text"><strong>Watch first-call enablement recording</strong><small>15 min 41 sec · Play on this page after unlock</small></span>
+<span class="cars-file-text"><strong>Watch first-call recording</strong><small>Optimised video · 15 min 41 sec · Watch on this page</small></span>
 <span aria-hidden="true" class="cars-file-arrow">↗</span>
 </button>
 <button aria-haspopup="dialog" class="cars-file clickable cars-unlock-btn" data-cars-action="deck" type="button">
 <span aria-hidden="true" class="cars-file-symbol">PPT</span>
-<span class="cars-file-text"><strong>Download full CARS first-call deck</strong><small>UKI PowerPoint · Preliminary pricing included · Password required</small></span>
+<span class="cars-file-text"><strong>View CARS first-call deck</strong><small>20-slide online viewer · Original PowerPoint available · Preliminary pricing</small></span>
 <span aria-hidden="true" class="cars-file-arrow">↗</span>
 </button>
-<p class="cars-public-note"><strong>Internal Sales access:</strong> The recording and deck are encrypted. Enter the CARS access password to view or download. Please do not circulate the password or preliminary pricing externally.</p>
+<p class="cars-public-note"><strong>Internal Sales access:</strong> Enter the CARS password to view the recording or presentation. Both files remain encrypted on the public hosting service; commercial terms are confidential.</p>
 </div>
 </div>
 <div class="cars-related">Customer-facing support: <a href="#cars-guide">AI Readiness &amp; RunState Guide ↓</a>  ·  <a href="#cars-roadtozero">Road to Zero campaign hub ↓</a></div>
@@ -287,9 +297,7 @@ button.cars-file:disabled{cursor:wait;opacity:.72}
 <section aria-labelledby="sales-enablement-title" class="resource-group" id="sales-enablement">
 <div class="resource-group-head"><div><div class="resource-group-kicker">02 / Sales reference material</div><h4 id="sales-enablement-title">Sales enablement</h4><p>Supporting AI readiness reference for shaping customer conversations.</p></div><span class="resource-count">1 resource</span></div>
 <div class="library resource-grid-two single-sales-resource">
-
 <a aria-label="Open Crossfuze AI Readiness Gap — full AI maturity reference (new tab)" class="asset live" href="Crossfuze-AI-Maturity-Document.html" rel="noopener noreferrer" target="_blank"><div class="asset-top"><span>AI readiness &amp; maturity</span><span>LIVE · HTML REFERENCE</span></div><div class="asset-icon">02</div><h3>The ServiceNow AI Readiness Gap</h3><p>The full ServiceNow AI implementation sequence: from the readiness gap to Foundation, Crawl, Walk, Run and Fly maturity stages.</p><span class="open">Open maturity reference ↗</span></a>
-
 </div>
 <p class="resource-footnote"><strong>Reference note: </strong>The AI Readiness Gap link opens the uploaded Crossfuze AI Maturity / ServiceNow AI Implementation Sequence full-reference HTML. The live Road to Zero Campaign Hub and unpublished working master are listed separately under Campaign Resources.</p>
 </section>
@@ -302,7 +310,7 @@ button.cars-file:disabled{cursor:wait;opacity:.72}
 <section aria-labelledby="conversion-assets-title" class="resource-group resource-group-last" id="conversion-assets">
 <div class="resource-group-head"><div><div class="resource-group-kicker">04 / Customer next steps</div><h4 id="conversion-assets-title">Conversion assets</h4><p>Help customers benchmark, estimate, prioritise and book the next conversation.</p></div><span class="resource-count">2 assets</span></div>
 <div class="library resource-grid-two">
-<a class="asset live" href="https://www.crossfuze.com/campaigns/servicenow-ai-readiness-tools" rel="noopener noreferrer" target="_blank"><div class="asset-top"><span>Conversion hub</span><span>Live</span></div><div class="asset-icon">05</div><h3>AI Readiness &amp; Renewal Tools</h3><p>The browser-based benchmark, Assist Estimator, Tier Map and route to the 90-minute assessment.</p><span class="open">Open tools hub ↗</span></a>
+<a class="asset live" href="https://www.crossfuze.com/interactive-tools" rel="noopener noreferrer" target="_blank"><div class="asset-top"><span>Conversion hub</span><span>Live</span></div><div class="asset-icon">05</div><h3>AI Readiness &amp; Renewal Tools</h3><p>The browser-based benchmark, Assist Estimator, Tier Map and route to the 90-minute assessment.</p><span class="open">Open tools hub ↗</span></a>
 <a class="asset live" href="https://www.crossfuze.com/campaigns/ai-readiness-assessment" rel="noopener noreferrer" target="_blank"><div class="asset-top"><span>Customer conversion</span><span>Live</span></div><div class="asset-icon">06</div><h3>90-minute AI Readiness Assessment</h3><p>A facilitated next step to validate readiness, identify the priority outcome and shape the first 90 days.</p><span class="open">View assessment ↗</span></a>
 </div>
 </section>
@@ -321,7 +329,7 @@ button.cars-file:disabled{cursor:wait;opacity:.72}
 <button aria-label="Close secure resources" class="cars-lock-close" id="cars-close" type="button">×</button>
 <span class="cars-lock-kicker">Crossfuze internal · Encrypted asset</span>
 <h3 class="cars-lock-title" id="cars-lock-title">Unlock CARS resource</h3>
-<p class="cars-lock-description">Enter the internal CARS access password. The file is decrypted in your browser; the password is not stored on the website.</p>
+<p class="cars-lock-description">Enter the CARS password to open the secure resource. Playback and presentation previews are available here; the original deck can be downloaded separately.</p>
 <form autocomplete="off" class="cars-lock-form" id="cars-lock-form">
 <input aria-label="CARS access password" autocomplete="new-password" id="cars-password" placeholder="Internal access password" required="" spellcheck="false" type="password"/>
 <button id="cars-unlock-submit" type="submit">Unlock resource</button>
@@ -329,92 +337,110 @@ button.cars-file:disabled{cursor:wait;opacity:.72}
 <p aria-live="polite" class="cars-lock-status" id="cars-lock-status" role="status"></p>
 <div class="cars-lock-media" hidden="" id="cars-lock-media">
 <video aria-label="Crossfuze AI RunState first-call recording" controls="" id="cars-video" playsinline="" preload="metadata"></video>
-<button class="cars-lock-download" hidden="" id="cars-download-video" type="button">Download MP4</button>
+<button class="cars-lock-download" hidden="" id="cars-download-video" type="button">Download optimised MP4</button>
 </div>
-<p class="cars-lock-note">Confidential Sales materials including preliminary commercial terms. Do not share the password or decrypted materials externally. This is password-based file encryption, not individual staff authentication.</p>
+<div class="cars-deck-viewer" hidden="" id="cars-deck-viewer">
+<p class="cars-deck-description">20-slide first-call presentation · Confidential preliminary pricing · Scroll within the viewer or open the slides in another tab.</p>
+<iframe id="cars-pdf-frame" loading="lazy" referrerpolicy="no-referrer" title="CARS first-call presentation (PDF slides)"></iframe>
+<div class="cars-view-actions">
+<button class="cars-lock-download" id="cars-open-pdf" type="button">Open slides in new tab</button>
+<button class="cars-lock-download" id="cars-download-pptx" type="button">Download original PowerPoint</button>
+</div>
+<p class="cars-deck-disclaimer">The slides include preliminary pricing. For internal Sales use only.</p>
+</div>
+
+<p class="cars-lock-note">Preliminary commercial terms are confidential. Files are encrypted at rest; shared-password access is not a replacement for Crossfuze employee authentication.</p>
 </div>
 </dialog>
-<script>
-/* CARS file-content encryption: no access password or decryption key is shipped with this page. */
-(() => {
-  'use strict';
-  const files = {"recording": {"parts": ["assets/CARS_First_Call_Recording.enc.part01", "assets/CARS_First_Call_Recording.enc.part02", "assets/CARS_First_Call_Recording.enc.part03", "assets/CARS_First_Call_Recording.enc.part04"], "filename": "Crossfuze_AI_RunState_First_Call_Recording.mp4", "mime": "video/mp4"}, "deck": {"parts": ["assets/CARS_First_Call_Deck.enc.part01"], "filename": "Crossfuze_AI_RunState_Intro_Deck_UKI.pptx", "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation"}};
-  const iterations = 310000;
-  const prefix = [67,70,90,67,65,82,48,49]; // CFZCAR01
-  const dlg = document.getElementById('cars-lock-dialog');
-  const title = document.getElementById('cars-lock-title');
-  const form = document.getElementById('cars-lock-form');
-  const input = document.getElementById('cars-password');
-  const submit = document.getElementById('cars-unlock-submit');
-  const status = document.getElementById('cars-lock-status');
-  const media = document.getElementById('cars-lock-media');
-  const player = document.getElementById('cars-video');
-  const dlVideo = document.getElementById('cars-download-video');
-  let current = 'recording';
-  let mediaURL = null;
-  let busy = false;
-
-  const setStatus = (msg, cls='') => {status.textContent=msg;status.className='cars-lock-status '+cls;};
-  const cleanupVideo=()=>{player.pause();player.removeAttribute('src');player.load();if(mediaURL)URL.revokeObjectURL(mediaURL);mediaURL=null;media.hidden=true;dlVideo.hidden=true;};
-  const open = (kind) => {
-    current=kind;
-    cleanupVideo();
-    title.textContent=kind==='recording'?'Watch the CARS first-call recording':'Download the CARS first-call deck';
-    input.value='';form.hidden=false;submit.disabled=false;busy=false;setStatus('');
-    dlg.showModal();input.focus();
-  };
-  document.querySelectorAll('[data-cars-action]').forEach(btn=>btn.addEventListener('click',()=>open(btn.dataset.carsAction)));
-  const close=()=>{if(!busy){cleanupVideo();input.value='';dlg.close();}};
-  document.getElementById('cars-close').addEventListener('click',close);
-  dlg.addEventListener('cancel', e=>{if(busy)e.preventDefault();else cleanupVideo();});
-  dlg.addEventListener('close',()=>{cleanupVideo();input.value='';});
-
-  function downloadFile(blob, filename) {
-    const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=filename;
-    document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),30000);
-  }
-  async function decryptFile(kind,password) {
-    const config=files[kind];const parts=[];let total=0;
-    for(let i=0;i<config.parts.length;i++) {
-      setStatus(`Loading encrypted resource (${i+1} of ${config.parts.length})…`);
-      const res=await fetch(config.parts[i],{cache:'no-store'});
-      if(!res.ok)throw Error('Encrypted asset could not be loaded (HTTP '+res.status+'). Check that all asset segments were uploaded.');
-      const buf=new Uint8Array(await res.arrayBuffer());parts.push(buf);total+=buf.length;
-    }
-    const packed=new Uint8Array(total);let offset=0;
-    for(const piece of parts){packed.set(piece,offset);offset+=piece.length;}
-    if(packed.length<53 || !prefix.every((v,i)=>packed[i]===v))throw Error('Encrypted file format is invalid. Re-upload the complete assets folder.');
-    const salt=packed.slice(8,24), nonce=packed.slice(24,36), ciphertext=packed.slice(36);
-    setStatus('Checking password and decrypting securely…');
-    const enc=new TextEncoder().encode(password);
-    const base=await crypto.subtle.importKey('raw',enc,'PBKDF2',false,['deriveKey']);
-    const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
-    const bytes=await crypto.subtle.decrypt({name:'AES-GCM',iv:nonce,additionalData:new TextEncoder().encode('CFZCAR01')},key,ciphertext);
-    return new Blob([bytes],{type:config.mime});
-  }
-  form.addEventListener('submit',async e=>{
-    e.preventDefault();if(busy)return;
-    if(!window.crypto?.subtle){setStatus('A secure HTTPS connection is required to unlock these materials.','error');return;}
-    busy=true;submit.disabled=true;input.disabled=true;
-    const password=input.value;
-    input.value='';
-    try {
-      const blob=await decryptFile(current,password);
-      form.hidden=true;
-      if(current==='recording') {
-        mediaURL=URL.createObjectURL(blob);player.src=mediaURL;media.hidden=false;dlVideo.hidden=false;
-        dlVideo.onclick=()=>downloadFile(blob,files.recording.filename);
-        setStatus('Recording unlocked. Press Play to watch here.','success');
-      } else {
-        downloadFile(blob,files.deck.filename);
-        setStatus('PowerPoint unlocked. Your download has started.','success');
-      }
-    } catch(err) {
-      setStatus(err instanceof DOMException && err.name==='OperationError' ?
-        'Incorrect password. Please try again.' : (err.message||'Unable to unlock the resource.'),'error');
-      form.hidden=false;
-    } finally {busy=false;submit.disabled=false;input.disabled=false;}
-  });
+<script>/* CARS password-encrypted resources: key and passphrase are not stored or sent with the site. */
+(()=>{
+ 'use strict';
+ const assets={"recording": {"parts": ["assets/CARS_Optimised_720p_Recording.enc"], "filename": "Crossfuze_AI_RunState_First_Call_Recording_720p.mp4", "mime": "video/mp4"}, "deckPdf": {"parts": ["assets/CARS_First_Call_Slides_PDF.enc"], "filename": "Crossfuze_AI_RunState_First_Call_Slides.pdf", "mime": "application/pdf"}, "deck": {"parts": ["assets/CARS_First_Call_Deck.enc.part01"], "filename": "Crossfuze_AI_RunState_Intro_Deck_UKI.pptx", "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation"}};
+ const iterations=310000;
+ const modal=document.getElementById('cars-lock-dialog');
+ const title=document.getElementById('cars-lock-title');
+ const form=document.getElementById('cars-lock-form');
+ const input=document.getElementById('cars-password');
+ const submit=document.getElementById('cars-unlock-submit');
+ const status=document.getElementById('cars-lock-status');
+ const media=document.getElementById('cars-lock-media');
+ const video=document.getElementById('cars-video');
+ const downVideo=document.getElementById('cars-download-video');
+ const deckPanel=document.getElementById('cars-deck-viewer');
+ const pdfFrame=document.getElementById('cars-pdf-frame');
+ const openPdf=document.getElementById('cars-open-pdf');
+ const downPpt=document.getElementById('cars-download-pptx');
+ let current='recording', busy=false, videoUrl=null, pdfUrl=null, deckBlob=null, videoBlob=null;
+ const setStatus=(message,kind='')=>{status.textContent=message;status.className='cars-lock-status '+kind};
+ function cleanup(){
+   video.pause();video.removeAttribute('src');video.load();media.hidden=true;
+   downVideo.hidden=true;
+   pdfFrame.removeAttribute('src');deckPanel.hidden=true;
+   if(videoUrl)URL.revokeObjectURL(videoUrl);
+   if(pdfUrl)URL.revokeObjectURL(pdfUrl);
+   videoUrl=null;pdfUrl=null;deckBlob=null;videoBlob=null;
+ }
+ function open(kind){
+   cleanup();current=kind;form.hidden=false;input.disabled=false;submit.disabled=false;busy=false;input.value='';
+   title.textContent=kind==='recording'?'Watch the CARS first-call recording':'View the CARS first-call deck';
+   setStatus('');modal.showModal();input.focus();
+ }
+ document.querySelectorAll('[data-cars-action]').forEach(button=>button.addEventListener('click',()=>open(button.dataset.carsAction)));
+ document.getElementById('cars-close').addEventListener('click',()=>{if(!busy)modal.close()});
+ modal.addEventListener('cancel',ev=>{if(busy)ev.preventDefault()});
+ modal.addEventListener('close',()=>{cleanup();input.value=''});
+ const download=(blob,name)=>{
+   if(!blob)return;
+   const url=URL.createObjectURL(blob),a=document.createElement('a');
+   a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+   setTimeout(()=>URL.revokeObjectURL(url),60000);
+ };
+ downPpt.addEventListener('click',()=>download(deckBlob,assets.deck.filename));
+ openPdf.addEventListener('click',()=>{if(pdfUrl)window.open(pdfUrl,'_blank','noopener,noreferrer')});
+ downVideo.addEventListener('click',()=>download(videoBlob,assets.recording.filename));
+ async function decrypt(which,pass){
+   const config=assets[which],pieces=[];let size=0;
+   for(let i=0;i<config.parts.length;i++){
+     setStatus('Loading '+(which==='deckPdf'?'presentation slides':which==='deck'?'original PowerPoint':'optimised recording')+'…');
+     const resp=await fetch(config.parts[i]);
+     if(!resp.ok)throw Error('Protected file is missing (HTTP '+resp.status+'). Re-upload the complete assets folder.');
+     const part=new Uint8Array(await resp.arrayBuffer());pieces.push(part);size+=part.length;
+   }
+   const packed=new Uint8Array(size);let pos=0;
+   for(const chunk of pieces){packed.set(chunk,pos);pos+=chunk.length}
+   const prefix='CFZCAR01';
+   if(size<53||Array.from(prefix).some((letter,i)=>packed[i]!==letter.charCodeAt(0)))throw Error('Invalid protected file. Re-upload its assets.');
+   const salt=packed.slice(8,24),nonce=packed.slice(24,36),cipher=packed.slice(36);
+   setStatus('Unlocking '+(which==='deckPdf'?'slides':which==='deck'?'PowerPoint':'recording')+'…');
+   const keyRaw=await crypto.subtle.importKey('raw',new TextEncoder().encode(pass),'PBKDF2',false,['deriveKey']);
+   const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations,hash:'SHA-256'},keyRaw,{name:'AES-GCM',length:256},false,['decrypt']);
+   const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:nonce,additionalData:new TextEncoder().encode(prefix)},key,cipher);
+   return new Blob([plain],{type:config.mime});
+ }
+ form.addEventListener('submit',async ev=>{
+   ev.preventDefault();if(busy)return;
+   if(!window.crypto?.subtle){setStatus('Open this page over HTTPS to unlock the resources.','error');return}
+   busy=true;submit.disabled=true;input.disabled=true;
+   const pass=input.value;input.value='';
+   try{
+     if(current==='recording'){
+       videoBlob=await decrypt('recording',pass);
+       videoUrl=URL.createObjectURL(videoBlob);
+       video.src=videoUrl;media.hidden=false;downVideo.hidden=false;
+       setStatus('Ready — press Play to watch the recording.','success');
+     }else{
+       const pdfBlob=await decrypt('deckPdf',pass);
+       deckBlob=await decrypt('deck',pass);
+       pdfUrl=URL.createObjectURL(pdfBlob);
+       pdfFrame.src=pdfUrl+'#view=FitH';deckPanel.hidden=false;
+       setStatus('Slides unlocked. View them below or click Download original PowerPoint.','success');
+     }
+     form.hidden=true;
+   }catch(err){
+     setStatus(err instanceof DOMException&&err.name==='OperationError'?'Incorrect password. Try again.':(err.message||'Unable to open file.'),'error');
+     form.hidden=false;
+   }finally{busy=false;submit.disabled=false;input.disabled=false}
+ });
 })();
 </script></body>
 </html>
